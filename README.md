@@ -1,0 +1,1 @@
+# Front application that serve as a blog
