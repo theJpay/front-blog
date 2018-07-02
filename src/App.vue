@@ -31,9 +31,9 @@
       <v-toolbar-title class="white--text">French Guy In Norway</v-toolbar-title>
 
       <v-toolbar-items class="hidden-sm-and-down menu">
-        <v-btn flat @click="goTo('home')">Home</v-btn>
-        <v-btn flat @click="goTo('blogs')">Blogs</v-btn>
-        <v-btn flat @click="goTo('mdeditor')">Markdown Editor</v-btn>
+        <v-btn flat @click="goTo('/')">Home</v-btn>
+        <v-btn flat @click="goTo('/blogs')">Blogs</v-btn>
+        <v-btn flat @click="goTo('/mdeditor')">Markdown Editor</v-btn>
       </v-toolbar-items>
 
       <v-spacer></v-spacer>
