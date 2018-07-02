@@ -10,17 +10,17 @@
         <v-divider></v-divider>
         <v-list-tile>
           <v-list-tile-content>
-            <v-list-tile-title>Home</v-list-tile-title>
+            <v-list-tile-title @click="goTo('/')">Home</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
           <v-list-tile-content>
-            <v-list-tile-title>Blogs</v-list-tile-title>
+            <v-list-tile-title @click="goTo('/blogs')">Blogs</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
           <v-list-tile-content>
-            <v-list-tile-title>.md Editor</v-list-tile-title>
+            <v-list-tile-title @click="goTo('/mdeditor')">.md Editor</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
