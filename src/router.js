@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Blogs from './views/Blogs.vue'
+import Article from './views/Article.vue'
 import MdEditor from './views/MdEditor.vue'
 import Admin from './views/Admin.vue'
 
@@ -10,6 +11,10 @@ Vue.use(Router)
 const routes = [
   {
     path: '/',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
     name: 'home',
     component: Home
   },
@@ -17,6 +22,11 @@ const routes = [
     path: '/blogs',
     name: 'blogs',
     component: Blogs
+  },
+  {
+    path: '/blogs/:id',
+    name: 'article',
+    component: Article
   },
   {
     path: '/mdeditor',
