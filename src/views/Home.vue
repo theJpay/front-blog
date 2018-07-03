@@ -8,19 +8,16 @@
     <div>
       <v-container grid-list-xl>
         <v-layout v-bind="binding">
-          <v-flex>
-            <v-card dark color="primary">
-              <v-card-text>one</v-card-text>
-            </v-card>
-          </v-flex>
-          <v-flex>
+          <v-flex v-for="article in index['articles']" :key="article.title">
             <v-card dark color="secondary">
-              <v-card-text>two</v-card-text>
-            </v-card>
-          </v-flex>
-          <v-flex>
-            <v-card dark color="accent">
-              <v-card-text>three</v-card-text>
+              <v-card-media src="@/../example/picture-1.jpg" height="200px"></v-card-media>
+              <v-card-title primary-title>
+                <div>
+                  <h3 class="headline mb-0">{{ article.title }}</h3>
+                  <div> {{ formatDate(article.date) }} </div>
+                </div>
+              </v-card-title>
+              <v-card-text>{{ '@/../example/'+article.picture }}</v-card-text>
             </v-card>
           </v-flex>
         </v-layout>
@@ -37,7 +34,14 @@
     name: 'Home',
     data() {
       return {
-        index: JSON.stringify(index)
+        index: JSON.parse(JSON.stringify(index))
+      }
+    },
+    methods: {
+      formatDate(date) {
+        const pad = (s) => { return (s < 10) ? '0' + s : s; };
+        const d = new Date(date);
+        return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join('/')
       }
     },
     computed: {
