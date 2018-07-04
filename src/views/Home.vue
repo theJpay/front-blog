@@ -1,59 +1,30 @@
 <template>
   <div>
     <div class="home-header">
-      <img src="../assets/fgin-header.png" alt="Photo accueil" id="home-header" class="img-responsive">
-      <h1 id="title-header-lg" class="hidden-sm-and-down">The blog of an IT student living in Norway</h1>
-      <h1 id="title-header-sm" class="hidden-md-and-up">The blog of an IT student living in Norway</h1>
+      <h1 id="title-header-lg" class="hidden-xs-only">The blog of an IT student living in Norway</h1>
+      <h1 id="title-header-sm" class="hidden-sm-and-up">The blog of an IT student living in Norway</h1>
     </div>
-    <div class="news">
-      <h1 class="secondary--text">My most recent articles : </h1>
-      <table>
-        <thead>
-        <tr>
-          <th>size</th>
-          <th>xs</th>
-          <th>sm</th>
-          <th>md</th>
-          <th>lg</th>
-          <th>xl</th>
-        </tr>
-        </thead>
-        <tbody>
-          <th>?</th>
-          <td>{{this.$vuetify.breakpoint.xs}}</td>
-          <td>{{this.$vuetify.breakpoint.sm}}</td>
-          <td>{{this.$vuetify.breakpoint.md}}</td>
-          <td>{{this.$vuetify.breakpoint.lg}}</td>
-          <td>{{this.$vuetify.breakpoint.xl}}</td>
-        </tbody>
-      </table>
-      <v-container grid-list-xl>
-        <v-layout v-bind="binding">
-          <v-flex md4 v-for="article in index.articles" v-bind:key="article.title">
-            <div class="elevation-15 card">
-              <div class="card-media">
-                <img :src="require('./example/'+article.picture)" class="card-img">
-              </div>
-              <div class="card-txt">
-                <h2>{{article.title}}</h2>
-                <h3>{{formatDate(article.date)}}</h3>
-              </div>
-            </div>
-          </v-flex>
-        </v-layout>
-      </v-container>
+    <div id="presentation">
+      <vue-article :md="test" />
     </div>
   </div>
 </template>
 
 <script>
+import Article from "./Article";
+
 import index from "./example/index.json";
+import readme from "../../README.md";
 
 export default {
   name: "Home",
+  components: {
+    "vue-article": Article
+  },
   data() {
     return {
-      index: JSON.parse(JSON.stringify(index))
+      index: JSON.parse(JSON.stringify(index)),
+      test: readme
     };
   },
   methods: {
@@ -80,9 +51,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .home-header {
-  width: 100%;
+  height: 400px;
+  background: url("../assets/fgin-header.png") center no-repeat;
   text-align: center;
   overflow: hidden;
 }
@@ -94,49 +66,52 @@ export default {
 }
 
 #title-header-lg {
+  font-family: Shrikhand;
+  font-size: 2.5rem;
   position: absolute;
-  top: 220px;
+  width: 50%;
+  top: 15rem;
   left: 30%;
   transform: translate(-50%, -50%);
   color: white;
 }
 
 #title-header-sm {
-  position: absolute;
-  top: 180px;
+  font-family: Shrikhand;
+  font-size: 2rem;
+  position: relative;
+  top: 120px;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
 }
 
-/* Card element for desktop - LG */
-.card {
+#presentation {
+  width: 60%;
+  margin: 2rem auto;
+  font-family: Alice;
+  font-size: 1.2rem;
+  text-align: justify;
 }
 
-.card-media {
-  overflow: hidden;
-  height: 300px;
-
+#presentation h1 {
+  color: black;
+  font-size: 2.5rem;
+  font-family: Shrikhand;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.card-img {
+#presentation h2 {
+  color: black;
+  font-size: 1.9rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+#presentation iframe {
   position: relative;
-  left: 100%;
-  margin-left: -200%;
-  top: 100%;
-  margin-top: -200%;
-  width: 100%;
-}
-
-.card-txt {
-  text-align: left;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-/* */
-
-.news {
-  margin-top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 </style>

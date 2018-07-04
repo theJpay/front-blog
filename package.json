@@ -8,8 +8,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "d": "^1.0.0",
+    "mavon-editor": "^2.6.14",
+    "raw-loader": "^0.5.1",
     "vue": "^2.5.16",
+    "vue-markdown": "^2.2.4",
+    "vue-markdown-loader": "^2.4.1",
     "vue-router": "^3.0.1",
+    "vue-showdown": "^1.0.1",
     "vuetify": "^1.1.1"
   },
   "devDependencies": {
