@@ -154,6 +154,20 @@ export default {
   margin-bottom: 0.8rem;
 }
 
+.presentation h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.presentation h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
 .presentation iframe {
   height: 200px;
   width: 355.56px;
