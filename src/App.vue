@@ -62,25 +62,6 @@ export default {
 </script>
 
 <style>
-@font-face {
-  font-family: Alice;
-  src: url("./assets/fonts/Alice-Regular.ttf");
-}
-
-@font-face {
-  font-family: Medio;
-  src: url("./assets/fonts/medio.otf");
-}
-
-@font-face {
-  font-family: Poly;
-  src: url("./assets/fonts/Poly-Regular.ttf");
-}
-
-#app {
-  background: ;
-}
-
 .menu {
   margin-left: 40px;
 }
@@ -105,6 +86,36 @@ export default {
 
 .nav-link.router-link-exact-active {
   color: gold;
+}
+
+#footer {
+  margin: 5rem auto 2rem auto;
+  padding-top: 2rem;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  border-top: solid lightslategrey 0.05rem;
+}
+</style>
+
+<style>
+#app {
+  background: white;
+}
+
+@font-face {
+  font-family: Alice;
+  src: url("./assets/fonts/Alice-Regular.ttf");
+}
+
+@font-face {
+  font-family: Medio;
+  src: url("./assets/fonts/medio.otf");
+}
+
+@font-face {
+  font-family: Poly;
+  src: url("./assets/fonts/Poly-Regular.ttf");
 }
 
 .presentation {
@@ -169,14 +180,5 @@ export default {
     height: auto;
     width: auto;
   }
-}
-
-#footer {
-  margin: 5rem auto 2rem auto;
-  padding-top: 2rem;
-  width: 50%;
-  height: 100%;
-  text-align: center;
-  border-top: solid lightslategrey 0.05rem;
 }
 </style>
