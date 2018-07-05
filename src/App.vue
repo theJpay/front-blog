@@ -127,12 +127,6 @@ export default {
   text-align: justify;
 }
 
-@media screen and (max-width: 960px) {
-  .presentation {
-    width: 90%;
-  }
-}
-
 .presentation h1 {
   color: black;
   font-size: 2.5rem;
@@ -148,9 +142,37 @@ export default {
 }
 
 .presentation iframe {
+  height: 200px;
+  width: 355.56px;
+  border: none;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+
+
+.presentation table {
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.presentation table,
+.presentation th,
+.presentation td {
+  padding: 4px;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 960px) {
+  .presentation {
+    width: 90%;
+  }
+
+  .presentation iframe {
+    height: auto;
+    width: auto;
+  }
 }
 
 #footer {

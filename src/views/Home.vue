@@ -13,8 +13,8 @@
 <script>
 import Article from "./Article";
 
-import index from "./example/index.json";
-import readme from "../../README.md";
+import index from "../assets/example/index.json";
+import home from "../assets/articles/Home.md";
 
 export default {
   name: "Home",
@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       index: JSON.parse(JSON.stringify(index)),
-      presentation: readme
+      presentation: home
     };
   },
   methods: {
