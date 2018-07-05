@@ -76,21 +76,9 @@ export default {
   font-family: Poly;
   src: url("./assets/fonts/Poly-Regular.ttf");
 }
+
 #app {
-  background: papayawhip;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  background: ;
 }
 
 .menu {
@@ -98,20 +86,20 @@ export default {
 }
 
 .drawer-title {
-  color: darkslategrey;
+  color: #424242;
 }
 
 .drawer-link {
-  color: lightslategrey;
+  color: grey;
   text-decoration: none;
 }
 
 .drawer-link:hover {
-  color: #5d6c7c;
+  color: rgb(94, 94, 94);
 }
 
 .nav-link {
-  color: whitesmoke;
+  color: white;
   text-decoration: none;
 }
 
@@ -128,6 +116,7 @@ export default {
 }
 
 .presentation h1 {
+  font-family: Arial, Helvetica, sans-serif;
   color: black;
   font-size: 2.5rem;
   margin-top: 0.5rem;
@@ -135,8 +124,16 @@ export default {
 }
 
 .presentation h2 {
+  font-family: Arial, Helvetica, sans-serif;
   color: black;
   font-size: 1.9rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.presentation h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
 }
@@ -150,10 +147,9 @@ export default {
   transform: translateX(-50%);
 }
 
-
-
 .presentation table {
-  margin-top: 10px;
+  margin: 10px auto;
+
   border-collapse: collapse;
 }
 

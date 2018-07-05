@@ -1,8 +1,7 @@
 <template>
   <div>
     <div class="home-header">
-      <h1 id="title-header-lg" class="hidden-xs-only">The blog of an IT student living in Norway</h1>
-      <h1 id="title-header-sm" class="hidden-sm-and-up">The blog of an IT student living in Norway</h1>
+      <h1 id="title-header">The blog of an IT student living in Norway</h1>
     </div>
     <div class="presentation">
       <vue-article :md="presentation" />
@@ -53,8 +52,10 @@ export default {
 
 <style>
 .home-header {
-  height: 400px;
-  background: url("../assets/fgin-header.png") center no-repeat;
+  height: 700px;
+  background: url("../assets/bg-star.jpg") center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   text-align: center;
   overflow: hidden;
 }
@@ -65,24 +66,24 @@ export default {
   margin-left: -200%;
 }
 
-#title-header-lg {
-  font-family: Medio;
-  font-size: 2.6rem;
-  position: absolute;
-  width: 50%;
-  top: 15rem;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-#title-header-sm {
-  font-family: Medio;
-  font-size: 2.1rem;
+#title-header {
+  background: black;
+  padding: 5px 5px;
+  font-size: 3rem;
+  font-style: normal;
   position: relative;
-  top: 120px;
+  width: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(150, 150, 150);
+  mix-blend-mode:darken;
+}
+
+@media screen and (max-width: 800px) {
+  #title-header {
+    font-size: 2rem;
+    width: 95%;
+  }
 }
 </style>

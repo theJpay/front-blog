@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       mdeditor: presentation,
-      text: "# Voilà à quoi ressemble le markdown :\n## On peut faire des sous-titres\n### Des sous-sous-titres\n\nOn peut aussi | faire de | très jolis | tableaux !\n:--- | --- | :---: | ---:\nà gauche | aussi | centré | à droite"
+      text: "# This is what Markdown looks like :\n## You can do subtitles\n### Subsubtitles\n\nBut you can | also do | some pretty nice | tables !\n:--- | --- | :---: | ---:\nleft | again | centerd | right"
     };
   },
   methods: {
