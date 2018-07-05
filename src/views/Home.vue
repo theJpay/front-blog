@@ -11,9 +11,7 @@
 
 <script>
 import Article from "./Article";
-
-import index from "../assets/example/index.json";
-import home from "../assets/articles/Home.md";
+import home from "../assets/website/Home.md";
 
 export default {
   name: "Home",
@@ -22,7 +20,6 @@ export default {
   },
   data() {
     return {
-      index: JSON.parse(JSON.stringify(index)),
       presentation: home
     };
   },
@@ -53,7 +50,7 @@ export default {
 <style>
 .home-header {
   height: 700px;
-  background: url("../assets/bg-star.jpg") center no-repeat;
+  background: url("../assets/home-header-small.jpg") center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
@@ -77,7 +74,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(150, 150, 150);
-  mix-blend-mode:darken;
+  mix-blend-mode: darken;
 }
 
 @media screen and (max-width: 800px) {

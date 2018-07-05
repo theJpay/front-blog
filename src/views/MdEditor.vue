@@ -14,7 +14,7 @@
 
 <script>
 import Article from "./Article";
-import presentation from "../assets/articles/MdEditor.md";
+import presentation from "../assets/website/MdEditor.md";
 
 export default {
   name: "MdEditor",

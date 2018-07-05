@@ -27,7 +27,7 @@
     </v-navigation-drawer>
     <v-toolbar dark color="secondary">
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-
+      <img src="./assets/logo-fgin.png" alt="Logo FrGINo" class="nav-logo">
       <v-toolbar-title class="white--text">French Guy In Norway</v-toolbar-title>
 
       <v-toolbar-items class="hidden-sm-and-down menu">
@@ -77,6 +77,11 @@ export default {
 
 .drawer-link:hover {
   color: rgb(94, 94, 94);
+}
+
+.nav-logo {
+  height: 80%;
+  width: auto;
 }
 
 .nav-link {
