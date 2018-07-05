@@ -1,4 +1,8 @@
-# Front-only blog made with Vue.js and Firebase - FrenchGuyInNorway
+# Front-only blog made with Vue.js and Firebase
+
+<iframe
+src="https://www.youtube.com/embed/E5yFcdPAGv0" style="margin: auto;">
+</iframe>
 
 ## Why am I making this project ?
 
@@ -23,8 +27,4 @@ This blog will be mainly used to share what I leave in Norway, my experience wit
 ### A little plus
 
 As I love listening to musing and discovering new artists/bands, I will try to upload a new music with my blog articles so that you can read my articles with a little bit of music. I will try to choose musics that had a meaning for me during the days covered in each blog, wether it is because i listened to it often or because I feel that it goes well with my mood. But if I don't have any, I will add one that I particularly love.  
-Here is the first one, from the newly released Gorillaz album :
-
-<iframe
-src="https://www.youtube.com/embed/E5yFcdPAGv0" style="margin: auto;">
-</iframe>
+You can find on top of this article a song made by Gorillaz. I listened to this song very often while coding this site.

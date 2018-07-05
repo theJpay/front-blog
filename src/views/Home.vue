@@ -4,8 +4,8 @@
       <h1 id="title-header-lg" class="hidden-xs-only">The blog of an IT student living in Norway</h1>
       <h1 id="title-header-sm" class="hidden-sm-and-up">The blog of an IT student living in Norway</h1>
     </div>
-    <div id="presentation">
-      <vue-article :md="test" />
+    <div class="presentation">
+      <vue-article :md="presentation" />
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       index: JSON.parse(JSON.stringify(index)),
-      test: readme
+      presentation: readme
     };
   },
   methods: {
@@ -66,8 +66,8 @@ export default {
 }
 
 #title-header-lg {
-  font-family: Shrikhand;
-  font-size: 2.5rem;
+  font-family: Medio;
+  font-size: 2.6rem;
   position: absolute;
   width: 50%;
   top: 15rem;
@@ -77,41 +77,12 @@ export default {
 }
 
 #title-header-sm {
-  font-family: Shrikhand;
-  font-size: 2rem;
+  font-family: Medio;
+  font-size: 2.1rem;
   position: relative;
   top: 120px;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-}
-
-#presentation {
-  width: 60%;
-  margin: 2rem auto;
-  font-family: Alice;
-  font-size: 1.2rem;
-  text-align: justify;
-}
-
-#presentation h1 {
-  color: black;
-  font-size: 2.5rem;
-  font-family: Shrikhand;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-#presentation h2 {
-  color: black;
-  font-size: 1.9rem;
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
-}
-
-#presentation iframe {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 </style>

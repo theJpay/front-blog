@@ -68,13 +68,13 @@ export default {
 }
 
 @font-face {
-  font-family: Shrikhand;
-  src: url("./assets/fonts/Shrikhand-Regular.ttf");
+  font-family: Medio;
+  src: url("./assets/fonts/medio.otf");
 }
 
 @font-face {
-  font-family: Galada;
-  src: url("./assets/fonts/Galada-Regular.ttf");
+  font-family: Poly;
+  src: url("./assets/fonts/Poly-Regular.ttf");
 }
 #app {
   background: papayawhip;
@@ -117,6 +117,40 @@ export default {
 
 .nav-link.router-link-exact-active {
   color: gold;
+}
+
+.presentation {
+  width: 50%;
+  margin: 2rem auto;
+  font-family: Poly;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+@media screen and (max-width: 960px) {
+  .presentation {
+    width: 90%;
+  }
+}
+
+.presentation h1 {
+  color: black;
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.presentation h2 {
+  color: black;
+  font-size: 1.9rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.presentation iframe {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #footer {
