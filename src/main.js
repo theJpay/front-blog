@@ -1,11 +1,13 @@
 import Vue from "vue";
-import "./plugins/vuetify";
 import App from "./App.vue";
 import router from "./router";
+//Vuetify
 import Vuetify from "vuetify";
+import "./plugins/vuetify";
+//Markdown
 import VueMarkdown from "vue-markdown";
 import MavonEditor from "mavon-editor";
-import 'mavon-editor/dist/css/index.css';
+import "mavon-editor/dist/css/index.css";
 
 Vue.use(Vuetify).use(MavonEditor);
 Vue.component("VueMarkdown", VueMarkdown);

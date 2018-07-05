@@ -1,16 +1,15 @@
 <template>
     <div>
         <div class="presentation">
-          <div v-for="(article,index) in summary.articles" :key="article.file" v-bind:class="{ line: index != summary.articles.length - 1}" class="article">
+          <div v-for="(article,index) in summary" :key="article.file" v-bind:class="{ line: index != summary.length - 1}" class="article">
             <h1>{{ article.title }}</h1>
             <div class="date-space">
-              <h5>{{ Date(article.date) }}</h5>
+              <h5>{{ formatDate(article.date.toDate()) }}</h5>
             </div>
             <div class="read-space">
               <h5 @click="goToArticle(article.file)" class="read">Read...</h5>
             </div>
             <div class="fix">
-
             </div>
           </div>
         </div>
@@ -18,19 +17,39 @@
 </template>
 
 <script>
-import summaryFile from "../assets/example/index.json";
+import { firestoreapp } from "../db";
 
 export default {
   name: "Blogs",
   data() {
     return {
-      summary: JSON.parse(JSON.stringify(summaryFile))
+      summary: []
     };
   },
   methods: {
+    formatDate(date) {
+      const pad = s => {
+        return s < 10 ? "0" + s : s;
+      };
+      const d = new Date(date);
+      return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join(
+        "/"
+      );
+    },
     goToArticle(route) {
-      this.$router.push('blogs/'+route);
+      this.$router.push("blogs/" + route);
     }
+  },
+  created() {
+    firestoreapp
+      .collection("blog-articles")
+      .orderBy("date", "desc")
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          this.summary.push(doc.data());
+        });
+      });
   }
 };
 </script>

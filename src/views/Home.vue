@@ -24,15 +24,6 @@ export default {
     };
   },
   methods: {
-    formatDate(date) {
-      const pad = s => {
-        return s < 10 ? "0" + s : s;
-      };
-      const d = new Date(date);
-      return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join(
-        "/"
-      );
-    },
     goTo(path) {
       this.$router.push(path);
     }
@@ -65,6 +56,7 @@ export default {
 
 #title-header {
   background: black;
+  border-radius: 2px;
   padding: 5px 5px;
   font-size: 3rem;
   font-style: normal;

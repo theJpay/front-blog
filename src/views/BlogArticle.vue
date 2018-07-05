@@ -8,7 +8,10 @@
 
 export default {
   name: "Article",
-  created() {
+  data() {
+    return {
+      id: this.$route.params.id
+    };
   }
 };
 </script>
