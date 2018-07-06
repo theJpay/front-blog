@@ -4,7 +4,7 @@
         <vue-article :md="mdeditor" />
       </div>
       <div>
-        <mavon-editor :value="text" language="en" style="height: 600px; width: 70%; margin: 0 auto;" @change="updateText($event)"></mavon-editor>
+        <mavon-editor :value="text" language="en" style="height: 600px; width: 70%; margin: 0 auto; z-index: 0;" @change="updateText($event)"></mavon-editor>
       </div>
       <div class="presentation">
         <vue-markdown :source="text"></vue-markdown>
