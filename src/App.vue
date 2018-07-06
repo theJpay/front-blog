@@ -158,6 +158,11 @@ export default {
   margin-bottom: 0.8rem;
 }
 
+.presentation p {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
 .presentation iframe {
   height: 200px;
   width: 355.56px;

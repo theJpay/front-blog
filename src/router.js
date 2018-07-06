@@ -4,6 +4,7 @@ import Home from "./views/Home.vue";
 import Blogs from "./views/Blogs.vue";
 import BlogArticle from "./views/BlogArticle.vue";
 import MdEditor from "./views/MdEditor.vue";
+import Admin from "./views/Admin.vue";
 
 Vue.use(Router);
 
@@ -31,12 +32,17 @@ const routes = [
     path: "/mdeditor",
     name: "mdeditor",
     component: MdEditor
-  },
-  {
-    path: "*",
-    redirect: "/home"
   }
 ];
+
+if (process.env.NODE_ENV === "development") {
+  routes.push(
+    { path: "/admin", name: "Admin", component: Admin },
+    { path: "*", redirect: "/home" }
+  );
+} else {
+  routes.push({ path: "*", redirect: "/home" });
+}
 
 export default new Router({
   routes: routes
