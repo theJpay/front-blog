@@ -4,10 +4,10 @@
           <div v-for="(article,index) in summary" :key="article.file" v-bind:class="{ line: index != summary.length - 1}" class="article">
             <h1>{{ article.title }}</h1>
             <div class="date-space">
-              <h5>{{ formatDate(article.date.toDate()) }}</h5>
+              <h5>{{ formatDate(article.date) }}</h5>
             </div>
             <div class="read-space">
-              <h5 @click="goToArticle(article.file)" class="read">Read...</h5>
+              <h5 @click="goToArticle(article.link)" class="read">Read...</h5>
             </div>
             <div class="fix">
             </div>
@@ -42,7 +42,7 @@ export default {
   },
   created() {
     firestoreapp
-      .collection("blog-articles")
+      .collection("test")
       .orderBy("date", "desc")
       .get()
       .then(querySnapshot => {

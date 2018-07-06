@@ -1,7 +1,9 @@
 <template>
-  <div class="presentation">
-      <vue-markdown :source="article.article">
-      </vue-markdown>
+  <div>
+    <div class="presentation">
+        <vue-markdown :source="article.article">
+        </vue-markdown>
+    </div>
   </div>
 </template>
 
@@ -13,13 +15,13 @@ export default {
   data() {
     return {
       id: this.$route.params.id,
-      article: ""
+      article: {}
     };
   },
   created() {
     firestoreapp
-      .collection("blog-articles")
-      .where("file", "==", this.id)
+      .collection("test")
+      .where("link", "==", this.id)
       .get()
       .then(querySnapshot => {
         querySnapshot.forEach(doc => {
