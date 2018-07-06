@@ -109,16 +109,6 @@ export default {
 }
 
 @font-face {
-  font-family: Alice;
-  src: url("./assets/fonts/Alice-Regular.ttf");
-}
-
-@font-face {
-  font-family: Medio;
-  src: url("./assets/fonts/medio.otf");
-}
-
-@font-face {
   font-family: Poly;
   src: url("./assets/fonts/Poly-Regular.ttf");
 }
@@ -178,8 +168,7 @@ export default {
 }
 
 .presentation table {
-  margin: 10px auto;
-
+  margin: 2rem auto;
   border-collapse: collapse;
 }
 
@@ -198,6 +187,14 @@ export default {
   .presentation iframe {
     height: auto;
     width: auto;
+  }
+
+  .presentation h1 {
+    font-size: 2rem;
+  }
+
+  .presentation h2 {
+    font-size: 1.6rem;
   }
 }
 </style>
