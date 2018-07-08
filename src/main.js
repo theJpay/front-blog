@@ -13,6 +13,7 @@ Vue.use(Vuetify).use(MavonEditor);
 Vue.component("VueMarkdown", VueMarkdown);
 
 Vue.config.productionTip = false;
+console.log(Vue.config)
 
 new Vue({
   router,

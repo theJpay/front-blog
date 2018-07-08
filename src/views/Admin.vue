@@ -10,7 +10,7 @@
     </div>
     <div>
       <mavon-editor :value="article" language="en" style="height: 600px; width: 70%; margin: 0 auto; 
-    z-index: 0;" :boxShadow="false" @change="updateText($event)"></mavon-editor>
+    z-index: 0;" @change="updateText($event)"></mavon-editor>
     </div>
     <div class="presentation">
       <vue-markdown :source="article"></vue-markdown>

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" fixed temporary width="200">
+    <v-navigation-drawer v-model="drawer" fixed class="drawer" temporary width="200">
       <v-list>
         <v-list-tile>
           <v-list-tile-content>
@@ -25,18 +25,17 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar dark color="secondary">
+    <v-toolbar dark id="nav-bar">
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <img src="./assets/logo-fgin.png" alt="Logo FrGINo" class="nav-logo">
-      <v-toolbar-title class="white--text">French Guy In Norway</v-toolbar-title>
+      <v-toolbar-title class="white--text hidden-xs-only">French Guy In Norway</v-toolbar-title>
+      <v-toolbar-title class="white--text hidden-sm-and-up">FrGINo</v-toolbar-title>
 
       <v-toolbar-items class="hidden-sm-and-down menu">
         <v-btn flat @click="goTo('/home')"><router-link class="nav-link" to="/home">Home</router-link></v-btn>
         <v-btn flat @click="goTo('/blogs')"><router-link class="nav-link" to="/blogs">Blogs</router-link></v-btn>
         <v-btn flat @click="goTo('/mdeditor')"><router-link class="nav-link" to="/mdeditor">Markdown Editor</router-link></v-btn>
       </v-toolbar-items>
-
-      <v-spacer></v-spacer>
     </v-toolbar>
     <router-view/>
     <div id="footer">
@@ -67,16 +66,20 @@ export default {
 }
 
 .drawer-title {
-  color: #424242;
+  color: #273248;
 }
 
 .drawer-link {
-  color: grey;
+  color: #364969;
   text-decoration: none;
 }
 
 .drawer-link:hover {
-  color: rgb(94, 94, 94);
+  color: #485976;
+}
+
+#nav-bar {
+  background-color: #364969;
 }
 
 .nav-logo {
@@ -90,7 +93,7 @@ export default {
 }
 
 .nav-link.router-link-exact-active {
-  color: gold;
+  color: #e5d352;
 }
 
 #footer {
@@ -101,11 +104,20 @@ export default {
   text-align: center;
   border-top: solid lightslategrey 0.05rem;
 }
+
+#footer a {
+  color: #f06543;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #833825;
+}
 </style>
 
 <style>
 #app {
-  background: white;
+  background-color: #eee5e9;
 }
 
 @font-face {
@@ -161,6 +173,15 @@ export default {
 .presentation p {
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
+}
+
+.presentation a {
+  color: #f06543;
+  text-decoration: none;
+}
+
+.presentation a:hover {
+  color: #833825;
 }
 
 .presentation iframe {

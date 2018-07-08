@@ -55,7 +55,7 @@ export default {
 }
 
 #title-header {
-  background: black;
+  background: #000000;
   border-radius: 2px;
   padding: 5px 5px;
   font-size: 3rem;
@@ -66,7 +66,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(150, 150, 150);
-  mix-blend-mode: darken;
+  mix-blend-mode: multiply;
 }
 
 @media screen and (max-width: 800px) {
